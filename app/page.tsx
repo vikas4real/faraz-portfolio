@@ -24,9 +24,11 @@ import {
    Users,
    Award,
    Instagram,
+   Facebook,
 } from "lucide-react";
 import BusinessVentures from "@/components/business-ventures";
 import HealthcareProjects from "@/components/healthcare-projects";
+import VideoSection from "@/components/video";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -138,7 +140,7 @@ export default function Portfolio() {
                   {/* Logo/Brand with subtle animation */}
                   <div className="text-xl md:text-2xl font-bold text-white group">
                      <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent transition-all duration-300 group-hover:tracking-wider">
-                        Md. Faraz
+                        Md Faraz
                      </span>
                      <span className="inline-block w-2 h-2 ml-1 bg-cyan-400 rounded-full animate-pulse"></span>
                   </div>
@@ -229,12 +231,12 @@ export default function Portfolio() {
             <div className="absolute inset-0 z-0">
                <Scene3D />
             </div>
-            <div className="container mx-auto px-6 z-10 relative pt-8 md:pt-0">
+            <div className="container mx-auto px-6 z-10 relative pt-10 md:pt-10">
                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                   {/* Left side - Text content */}
                   <div className="text-center lg:text-left order-2 lg:order-1">
                      <h1 className="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-4">
-                        Md. Faraz
+                        Md Faraz
                      </h1>
                      <p className="hero-subtitle text-lg sm:text-xl md:text-2xl lg:text-3xl text-red-400 mb-6">
                         Empowering Healthcare Through Innovation
@@ -265,8 +267,8 @@ export default function Portfolio() {
                         <div className="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-2 shadow-2xl">
                            <img
                               src="/photo.jpeg?height=400&width=320&text=Faraz+Professional+Photo"
-                              alt="Md. Faraz - Healthcare Operations Manager & Software Developer"
-                              className="w-64 h-80 sm:w-80 sm:h-96 md:w-96 md:h-[500px] object-cover rounded-xl shadow-lg"
+                              alt="Md Faraz - Healthcare Operations Manager & Software Developer"
+                              className="w-80 h-80 sm:w-80 sm:h-96 md:w-50 md:h-[350px] object-cover rounded-xl shadow-lg"
                            />
 
                            {/* Floating badges */}
@@ -303,7 +305,7 @@ export default function Portfolio() {
                   </div>
                   <div className="text-center bg-white/10 backdrop-blur-md rounded-lg p-3 md:p-4 border border-white/20 hero-stats">
                      <div className="text-xl md:text-2xl lg:text-3xl font-bold text-green-400 mb-1">
-                        500+
+                        1000+
                      </div>
                      <div className="text-white/80 text-xs md:text-sm">
                         Lives Impacted
@@ -321,6 +323,8 @@ export default function Portfolio() {
             </div>
          </section>
 
+         {/* Video Section */}
+         <VideoSection aboutRef={aboutRef} />
          {/* About Section */}
          <section id="about" ref={aboutRef} className="py-20 bg-black/30">
             <div className="container mx-auto px-6">
@@ -338,8 +342,8 @@ export default function Portfolio() {
                         </div>
                         <p className="text-white/80 leading-relaxed">
                            I'm Faraz, currently leading multiple healthcare
-                           ventures across India and Dubai. From medical
-                           homecare to emergency ambulance services and hospital
+                           ventures across India and UAE. From medical homecare
+                           to emergency ambulance services and hospital
                            equipment distribution - I bridge gaps in healthcare
                            infrastructure through strategic execution and
                            innovation.
@@ -351,17 +355,17 @@ export default function Portfolio() {
          </section>
 
          {/* Projects Section */}
-         <section id="projects" ref={projectsRef} className="py-20 bg-black/30">
+         <section id="projects" ref={projectsRef} className="py-20 bg-black/40">
             <div className="container mx-auto px-6">
                <BusinessVentures />
 
-               <HealthcareProjects />
+               {/* <HealthcareProjects /> */}
 
                {/* Project Stats */}
                <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 align-items-center justify-center">
                   <div className="text-center p-6 bg-gradient-to-br from-red-600/20 to-red-800/20 rounded-lg border border-red-400/30">
                      <div className="text-3xl font-bold text-red-400 mb-2">
-                        15+
+                        50+
                      </div>
                      <div className="text-white/80 text-sm">
                         Healthcare Projects
@@ -482,9 +486,9 @@ export default function Portfolio() {
                      <CardContent className="p-8">
                         <div className="grid md:grid-cols-2 gap-8">
                            <div>
-                              <h3 className="text-2xl font-bold text-white mb-6">
+                              {/* <h3 className="text-2xl font-bold text-white mb-6">
                                  Let's Connect
-                              </h3>
+                              </h3> */}
                               <p className="text-white/80 mb-8">
                                  Open to collaborations, healthcare projects,
                                  and tech-powered solutions in the medical
@@ -493,15 +497,23 @@ export default function Portfolio() {
                               <div className="space-y-4">
                                  <div className="flex items-center text-white/80">
                                     <Mail className="h-5 w-5 mr-3 text-red-400" />
-                                    <span>faraz@healthcare.com</span>
+                                    <span>
+                                       <a href="mailto:mohammadfaraz8983@gmail.com">
+                                          mohammadfaraz8983@gmail.com
+                                       </a>
+                                    </span>
                                  </div>
                                  <div className="flex items-center text-white/80">
                                     <Phone className="h-5 w-5 mr-3 text-red-400" />
-                                    <span>+91-7380969994</span>
+                                    <span>
+                                       <a href="tel:+91-8934872701">
+                                          +91-8934872701
+                                       </a>
+                                    </span>
                                  </div>
                                  <div className="flex items-center text-white/80">
                                     <MapPin className="h-5 w-5 mr-3 text-red-400" />
-                                    <span>Max Healthcare, Lucknow</span>
+                                    <span>Lucknow, Uttar Pradesh, IN</span>
                                  </div>
                               </div>
                               <div className="flex space-x-4 mt-8">
@@ -509,6 +521,12 @@ export default function Portfolio() {
                                     size="sm"
                                     variant="outline"
                                     className="border-white text-white hover:bg-white hover:text-black bg-transparent"
+                                    onClick={() =>
+                                       window.open(
+                                          "https://www.instagram.com/faraz_8983/",
+                                          "_blank"
+                                       )
+                                    }
                                  >
                                     <Instagram className="h-4 w-4 mr-2" />
                                     Instagram
@@ -517,9 +535,15 @@ export default function Portfolio() {
                                     size="sm"
                                     variant="outline"
                                     className="border-white text-white hover:bg-white hover:text-black bg-transparent"
+                                    onClick={() =>
+                                       window.open(
+                                          "https://www.facebook.com/mohammad.faraz.9469",
+                                          "_blank"
+                                       )
+                                    }
                                  >
-                                    <Linkedin className="h-4 w-4 mr-2" />
-                                    LinkedIn
+                                    <Facebook className="h-4 w-4 mr-2" />
+                                    Facebook
                                  </Button>
                               </div>
                            </div>
@@ -528,7 +552,7 @@ export default function Portfolio() {
                                  <div className="text-center p-6 bg-red-600/20 rounded-lg">
                                     <Users className="h-8 w-8 text-red-400 mx-auto mb-2" />
                                     <div className="text-2xl font-bold text-white">
-                                       500+
+                                       1000+
                                     </div>
                                     <div className="text-white/60">
                                        Lives Saved
@@ -576,8 +600,7 @@ export default function Portfolio() {
          <footer className="py-8 bg-black/50 border-t border-white/10">
             <div className="container mx-auto px-6 text-center">
                <p className="text-white/60">
-                  © 2024 Md. Faraz. Saving lives through healthcare excellence
-                  and technological innovation.
+                  © {new Date().getFullYear()} All Rights Reserved - Md Faraz
                </p>
             </div>
          </footer>

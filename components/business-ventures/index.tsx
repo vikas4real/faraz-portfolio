@@ -27,7 +27,7 @@ import {
 const BusinessVentures = () => {
    const [activeModal, setActiveModal] = useState(null);
 
-   const openModal = (modalId) => {
+   const openModal = (modalId: any) => {
       setActiveModal(modalId);
    };
 
@@ -117,7 +117,7 @@ const BusinessVentures = () => {
                      </div>
                      <div className="flex justify-between items-center">
                         <span className="text-white/60 text-sm font-medium">
-                           Director
+                           Founder & Director
                         </span>
                         <div className="flex gap-2">
                            <Button
@@ -152,9 +152,9 @@ const BusinessVentures = () => {
                      </div>
                      <p className="text-white/80 mb-4 text-sm leading-relaxed">
                         Advanced emergency medical transportation services
-                        including ground ambulance, air and train medical
-                        evacuation, corporate coverage with GPS tracking and
-                        24/7 emergency response.
+                        including road ambulance, air and train ambulance,
+                        corporate coverage with GPS tracking and 24/7 emergency
+                        response.
                      </p>
                      <div className="flex flex-wrap gap-2 mb-4">
                         <Badge className="bg-green-600/20 text-green-300 border-green-400">
