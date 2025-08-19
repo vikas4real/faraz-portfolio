@@ -25,7 +25,9 @@ import {
    Award,
    Instagram,
    Facebook,
+   Calendar,
 } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import BusinessVentures from "@/components/business-ventures";
 import HealthcareProjects from "@/components/healthcare-projects";
 import VideoSection from "@/components/video";
@@ -124,6 +126,7 @@ export default function Portfolio() {
    const aboutRef = useRef<HTMLDivElement>(null);
    const projectsRef = useRef<HTMLDivElement>(null);
    // const experienceRef = useRef<HTMLDivElement>(null);
+   const skillsRef = useRef<HTMLDivElement>(null);
    const contactRef = useRef<HTMLDivElement>(null);
    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -398,10 +401,89 @@ export default function Portfolio() {
             </div>
          </section>
 
+         {/* Skills Section */}
+         <section id="skills" ref={skillsRef} className="py-20 bg-black/10">
+            <div className="container mx-auto px-6">
+               <h2 className="text-4xl font-bold text-white text-center mb-16">
+                  Skills
+               </h2>
+               <div className="grid md:grid-cols-3 gap-8">
+                  <div className="text-center">
+                     <h3 className="text-2xl font-bold text-red-400 mb-8">
+                        Healthcare Management
+                     </h3>
+                     <div className="space-y-4">
+                        {[
+                           "Emergency Response",
+                           "Team Coordination",
+                           "Medical Protocols",
+                           "Quality Assurance",
+                           "Patient Care",
+                        ].map((skill) => (
+                           <Badge
+                              key={skill}
+                              variant="outline"
+                              className="skill-item block w-full py-2 text-white border-red-400"
+                           >
+                              {skill}
+                           </Badge>
+                        ))}
+                     </div>
+                  </div>
+
+                  <div className="text-center">
+                     <h3 className="text-2xl font-bold text-blue-400 mb-8">
+                        Technical Skills
+                     </h3>
+                     <div className="space-y-4">
+                        {[
+                           "React/Next.js",
+                           "Node.js",
+                           "Python",
+                           "Database Design",
+                           "API Development",
+                        ].map((skill) => (
+                           <Badge
+                              key={skill}
+                              variant="outline"
+                              className="skill-item block w-full py-2 text-white border-blue-400"
+                           >
+                              {skill}
+                           </Badge>
+                        ))}
+                     </div>
+                  </div>
+
+                  <div className="text-center">
+                     <h3 className="text-2xl font-bold text-green-400 mb-8">
+                        Leadership
+                     </h3>
+                     <div className="space-y-4">
+                        {[
+                           "Strategic Planning",
+                           "Process Optimization",
+                           "Staff Training",
+                           "Crisis Management",
+                           "Innovation",
+                        ].map((skill) => (
+                           <Badge
+                              key={skill}
+                              variant="outline"
+                              className="skill-item block w-full py-2 text-white border-green-400"
+                           >
+                              {skill}
+                           </Badge>
+                        ))}
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
          {/* Experience Section */}
          {/* <section
             id="experience"
-            ref={experienceRef}
+            // ref={experienceRef}
             className="py-20 bg-black/30"
          >
             <div className="container mx-auto px-6">
@@ -476,7 +558,7 @@ export default function Portfolio() {
          </section> */}
 
          {/* Contact Section */}
-         <section id="contact" ref={contactRef} className="py-20">
+         <section id="contact" ref={contactRef} className="py-20 bg-black/30">
             <div className="container mx-auto px-6">
                <h2 className="text-4xl font-bold text-white text-center mb-16">
                   Get In Touch
